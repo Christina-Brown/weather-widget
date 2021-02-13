@@ -10,6 +10,7 @@ const API = {
 function App() {
   const [searchString, setSearchString] = useState("");
   const [weatherData, setWeatherData] = useState({});
+  const [forecast, setForecast] = useState({});
 
   function onSearch(e) {
     if (e.key.toLowerCase() === "enter" && searchString) {
@@ -35,11 +36,30 @@ function App() {
       });
   }
 
+  function getForecast() {
+    let longitude = weatherData.coord.lon;
+    let latitude = weatherData.coord.lat;
+
+    fetch(
+      `${API.base}onecall?lat=${latitude}&lon=${longitude}&exclude=hourly&units=metric&appid=${API.key}`
+    )
+      .then((response) => response.json())
+      .then((jsonResponse) => {
+        setForecast(jsonResponse);
+      });
+  }
+
   useEffect(() => {
     if (!searchString) {
       navigator.geolocation.getCurrentPosition(geoLocationWeather);
     }
   }, [searchString]);
+
+  useEffect(() => {
+    if (weatherData && weatherData.coord) {
+      getForecast();
+    }
+  }, [weatherData]);
 
   const getDate = (date) => {
     let months = [
@@ -100,9 +120,10 @@ function App() {
                 <div className="weather">{weatherData.weather[0].main}</div>
               </div>
             </div>
+            {forecast && <div className="foreCast"></div>}
           </div>
         ) : (
-          <div></div>
+          <div>Loading...</div>
         )}
       </main>
     </div>

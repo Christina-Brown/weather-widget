@@ -1,29 +1,62 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-family: "montseratt", sans-serif;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.app {
+  background-image: url("./assets/cloudy.jpg");
+  background-size: cover;
+  background-position: bottom;
+  transition: 0.5 ease-out;
 }
 
-.App-header {
-  background-color: #282c34;
+.app.sunny {
+  background-image: url("./assets/sunny.jpg");
+}
+
+.app.sunset {
+  background-image: url("./assets/sunset.jpg");
+}
+
+.app.evening {
+  background-image: url("./assets/evening.jpg");
+}
+
+.app.night {
+  background-image: url("./assets/night.jpg");
+}
+
+main {
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 255, 0.2),
+    rgba(0, 0, 0, 0.75)
+  );
+  padding: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.search .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 0 0 75px;
+  transition: 0.5s ease;
+}
+
+.search .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
 }

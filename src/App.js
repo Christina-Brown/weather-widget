@@ -8,6 +8,39 @@ const API = {
 };
 
 function App() {
+  const getDate = (date) => {
+    let months = [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December",
+    ];
+    let days = [
+      "Sunday",
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+    ];
+
+    let dayName = days[date.getDay()];
+    let dayNum = date.getDate();
+    let month = months[date.getMonth()];
+    let year = date.getFullYear();
+
+    return `${dayName} ${dayNum} ${month} ${year}`;
+  };
+
   return (
     <div className="app">
       <main>
@@ -20,7 +53,11 @@ function App() {
         </div>
         <div className="city-info">
           <div className="location">London, GB</div>
-          <div className="date"></div>
+          <div className="date">{getDate(new Date())}</div>
+          <div className="weather-info">
+            <div className="temp">7°C</div>
+            <div className="weather">cloudy</div>
+          </div>
         </div>
       </main>
     </div>

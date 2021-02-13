@@ -120,7 +120,21 @@ function App() {
                 <div className="weather">{weatherData.weather[0].main}</div>
               </div>
             </div>
-            {forecast && <div className="foreCast"></div>}
+            {forecast && forecast.daily && (
+              <div className="forecast">
+                {forecast.daily.slice(0, 5).map((day) => (
+                  <div key={day.dt}>
+                    <div className="forecast-day">
+                      <img
+                        src={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
+                        className="forecast-image"
+                      />
+                    </div>
+                    sunday
+                  </div>
+                ))}
+              </div>
+            )}
           </div>
         ) : (
           <div>Loading...</div>

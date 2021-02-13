@@ -95,3 +95,21 @@ main {
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
 }
+
+.forecast {
+  margin: 75px 0 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.forecast-day {
+  background-color: rgba(200, 200, 255, 0.2);
+  border-radius: 15px;
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+.forecast-image {
+  width: 10vw;
+}

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
+import { getDate, getDayName } from "./utils.js";
 
 const API = {
   // eslint-disable-next-line no-undef
@@ -53,46 +54,15 @@ function App() {
     if (!searchString) {
       navigator.geolocation.getCurrentPosition(geoLocationWeather);
     }
+    console.log("searcheffect");
   }, [searchString]);
 
   useEffect(() => {
     if (weatherData && weatherData.coord) {
       getForecast();
     }
+    console.log("weatherdataeffect");
   }, [weatherData]);
-
-  const getDate = (date) => {
-    let months = [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December",
-    ];
-    let days = [
-      "Sunday",
-      "Monday",
-      "Tuesday",
-      "Wednesday",
-      "Thursday",
-      "Friday",
-      "Saturday",
-    ];
-
-    let dayName = days[date.getDay()];
-    let dayNum = date.getDate();
-    let month = months[date.getMonth()];
-    let year = date.getFullYear();
-
-    return `${dayName} ${dayNum} ${month} ${year}`;
-  };
 
   return (
     <div className="app">
@@ -122,15 +92,16 @@ function App() {
             </div>
             {forecast && forecast.daily && (
               <div className="forecast">
-                {forecast.daily.slice(0, 5).map((day) => (
-                  <div key={day.dt}>
+                {forecast.daily.slice(0, 5).map((day, index) => (
+                  <div key={index}>
                     <div className="forecast-day">
                       <img
                         src={`http://openweathermap.org/img/wn/${day.weather[0].icon}@2x.png`}
                         className="forecast-image"
                       />
                     </div>
-                    sunday
+
+                    {index === 0 ? "Today" : getDayName(day.dt)}
                   </div>
                 ))}
               </div>

@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render search without crashing 1`] = `
+<div
+  className="forecast"
+>
+  <div
+    key="0"
+  >
+    <div
+      className="forecast-day"
+    >
+      <img
+        className="weather"
+        src="http://openweathermap.org/img/wn/1d@2x.png"
+      />
+    </div>
+    Today
+  </div>
+  <div
+    key="1"
+  >
+    <div
+      className="forecast-day"
+    >
+      <img
+        className="weather"
+        src="http://openweathermap.org/img/wn/2d@2x.png"
+      />
+    </div>
+    Monday 
+  </div>
+  <div
+    key="2"
+  >
+    <div
+      className="forecast-day"
+    >
+      <img
+        className="weather"
+        src="http://openweathermap.org/img/wn/3d@2x.png"
+      />
+    </div>
+    Monday 
+  </div>
+  <div
+    key="3"
+  >
+    <div
+      className="forecast-day"
+    >
+      <img
+        className="weather"
+        src="http://openweathermap.org/img/wn/4d@2x.png"
+      />
+    </div>
+    Monday 
+  </div>
+  <div
+    key="4"
+  >
+    <div
+      className="forecast-day"
+    >
+      <img
+        className="weather"
+        src="http://openweathermap.org/img/wn/5d@2x.png"
+      />
+    </div>
+    Monday 
+  </div>
+</div>
+`;

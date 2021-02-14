@@ -1,0 +1,36 @@
+.city-info {
+  text-align: center;
+}
+
+.city-info .location {
+  font-size: 40px;
+  font-weight: 500;
+  text-shadow: 2px 2px rgba(50, 50, 70, 0.4);
+}
+
+.city-info .date {
+  font-style: italic;
+}
+
+.weather-info .temp {
+  position: relative;
+  display: inline-block;
+  margin: 30px auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+
+  padding: 15px 25px;
+  font-size: 100px;
+  font-weight: 900;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
+  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.weather-info .weather {
+  font-size: 50px;
+  font-weight: 700;
+  text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

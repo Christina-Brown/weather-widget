@@ -1,7 +1,9 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { getImage } from "./../utils.js";
-import { getDate } from "./../utils.js";
+
+import { getImage } from "./../../utils.js";
+import { getDate } from "./../../utils.js";
+import "./cityInfo.css";
 
 export default function CityInfo({ weatherData }) {
   return (

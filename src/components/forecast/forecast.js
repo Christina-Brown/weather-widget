@@ -1,8 +1,8 @@
 import React from "react";
 import PropTypes from "prop-types";
-import "./forecast.css";
 
-import { getImage, getDayName } from "./../utils.js";
+import { getImage, getDayName } from "./../../utils.js";
+import "./forecast.css";
 
 export default function Forecast({ dailyForecast }) {
   return (

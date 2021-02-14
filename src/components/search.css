@@ -1,0 +1,21 @@
+.search .search-bar {
+  display: block;
+  width: 100%;
+  padding: 15px;
+
+  appearance: none;
+  background: none;
+  border: none;
+  outline: none;
+
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  margin: 0 0 75px;
+  transition: 0.5s ease;
+
+  font-size: medium;
+}
+
+.search .search-bar:focus {
+  background-color: rgba(255, 255, 255, 0.75);
+}

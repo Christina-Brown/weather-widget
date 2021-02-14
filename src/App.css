@@ -4,31 +4,32 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "montseratt", sans-serif;
-}
-
 .app {
-  background-image: url("./assets/cloudy.jpg");
+  background-image: url("./assets/sunny.jpg");
   background-size: cover;
   background-position: bottom;
   transition: 0.5 ease-out;
 }
 
-.app.sunny {
+.app-cloudy {
+  background-image: url("./assets/cloudy.jpg");
+}
+
+.app-sunny {
   background-image: url("./assets/sunny.jpg");
 }
 
-.app.sunset {
+.app-sunset {
   background-image: url("./assets/sunset.jpg");
 }
 
-.app.evening {
-  background-image: url("./assets/evening.jpg");
+.app-dawn {
+  background-image: url("./assets/dawn.jpg");
 }
 
-.app.night {
+.app-night {
   background-image: url("./assets/night.jpg");
+  background-color: pink;
 }
 
 main {
@@ -40,26 +41,6 @@ main {
   );
   padding: 25px;
   color: #fff;
-}
-
-.search .search-bar {
-  display: block;
-  width: 100%;
-  padding: 15px;
-
-  appearance: none;
-  background: none;
-  border: none;
-  outline: none;
-
-  background-color: rgba(255, 255, 255, 0.5);
-  border-radius: 10px;
-  margin: 0 0 75px;
-  transition: 0.5s ease;
-}
-
-.search .search-bar:focus {
-  background-color: rgba(255, 255, 255, 0.75);
 }
 
 .city-info {
@@ -94,22 +75,11 @@ main {
   font-size: 50px;
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.4);
-}
-
-.forecast {
-  margin: 75px 0 0;
   display: flex;
-  justify-content: center;
-  text-align: center;
+  flex-direction: column;
+  align-items: center;
 }
 
-.forecast-day {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-radius: 15px;
-  box-shadow: 3px 3px rgba(0, 0, 0, 0.2);
-  margin: 5px;
-}
-
-.forecast-image {
-  width: 10vw;
+.weather-image {
+  width: 15vw;
 }

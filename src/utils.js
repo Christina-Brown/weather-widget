@@ -22,15 +22,23 @@ let days = [
   "Saturday",
 ];
 
+export const getApi = {
+  // eslint-disable-next-line no-undef
+  key: process.env.REACT_APP_WEATHER_WIDGET,
+  base: "https://api.openweathermap.org/data/2.5/",
+};
+
 export const getDayName = (date) => {
   const convertedDate = new Date(date * 1000);
-  let dayName = days[convertedDate.getDay()];
+  const dayName = days[convertedDate.getDay()];
   return `${dayName} `;
 };
 
-export const getDayNum = (date) => {
-  let dayNum = date.getDate();
-  return `${dayNum} `;
+export const getTime = (date, time) => {
+  const convertedDate = new Date(date * 1000 - time);
+  const convertedHour = convertedDate.getUTCHours();
+  console.log(convertedHour);
+  return convertedHour;
 };
 
 export const getDate = (date) => {
@@ -39,4 +47,8 @@ export const getDate = (date) => {
   let month = months[date.getMonth()];
   let year = date.getFullYear();
   return `${dayName} ${dayNum} ${month} ${year}`;
+};
+
+export const getImage = (icon) => {
+  return `http://openweathermap.org/img/wn/${icon}@2x.png`;
 };

@@ -81,6 +81,6 @@ it("should fetch correct api when geolocation available", () => {
 
   expect(global.fetch).toHaveBeenCalledTimes(1);
   expect(global.fetch).toHaveBeenCalledWith(
-    `https://api.openweathermap.org/data/2.5/weather?lat=51.4236869&lon=-0.36001089999999997&units=metric&appid=${process.env.REACT_APP_WEATHER_WIDGETa}`
+    `https://api.openweathermap.org/data/2.5/weather?lat=51.4236869&lon=-0.36001089999999997&units=metric&appid=${process.env.REACT_APP_WEATHER_WIDGET}`
   );
 });

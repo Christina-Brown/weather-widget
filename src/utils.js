@@ -31,13 +31,12 @@ export const getApi = {
 export const getDayName = (date) => {
   const convertedDate = new Date(date * 1000);
   const dayName = days[convertedDate.getDay()];
-  return `${dayName} `;
+  return `${dayName}`;
 };
 
 export const getTime = (date, time) => {
   const convertedDate = new Date(date * 1000 - time);
   const convertedHour = convertedDate.getUTCHours();
-  console.log(convertedHour);
   return convertedHour;
 };
 

@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render CityInfo without crashing 1`] = `
+<div
+  className="city-info"
+>
+  <div
+    className="location"
+  >
+    Hampton
+    , 
+    GB
+  </div>
+  <div
+    className="date"
+  >
+    Monday 15 February 2021
+  </div>
+  <div
+    className="weather-info"
+  >
+    <div
+      className="temp"
+    >
+      3
+      °C
+    </div>
+    <div
+      className="weather"
+    >
+      <img
+        className="weather"
+        src="http://openweathermap.org/img/wn/04n@2x.png"
+      />
+      Clouds
+    </div>
+  </div>
+</div>
+`;

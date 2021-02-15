@@ -28,7 +28,7 @@ exports[`should render search without crashing 1`] = `
         src="http://openweathermap.org/img/wn/2d@2x.png"
       />
     </div>
-    Monday 
+    Monday
   </div>
   <div
     key="2"
@@ -41,7 +41,7 @@ exports[`should render search without crashing 1`] = `
         src="http://openweathermap.org/img/wn/3d@2x.png"
       />
     </div>
-    Monday 
+    Monday
   </div>
   <div
     key="3"
@@ -54,7 +54,7 @@ exports[`should render search without crashing 1`] = `
         src="http://openweathermap.org/img/wn/4d@2x.png"
       />
     </div>
-    Monday 
+    Monday
   </div>
   <div
     key="4"
@@ -67,7 +67,7 @@ exports[`should render search without crashing 1`] = `
         src="http://openweathermap.org/img/wn/5d@2x.png"
       />
     </div>
-    Monday 
+    Monday
   </div>
 </div>
 `;

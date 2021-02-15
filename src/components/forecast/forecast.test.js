@@ -37,3 +37,22 @@ beforeEach(() => {
 it("should render search without crashing", () => {
   expect(wrapper).toMatchSnapshot();
 });
+
+it("should only render 5 images", () => {
+  const Images = wrapper.find(".weather");
+  expect(Images.length).toEqual(5);
+});
+
+it("should call correct image source for first image", () => {
+  const Img1 = wrapper.find(".weather").at(0);
+  expect(Img1.getElement(0).props.src).toEqual(
+    "http://openweathermap.org/img/wn/1d@2x.png"
+  );
+});
+
+it("should call correct image source for last image", () => {
+  const Img1 = wrapper.find(".weather").at(4);
+  expect(Img1.getElement(0).props.src).toEqual(
+    "http://openweathermap.org/img/wn/5d@2x.png"
+  );
+});

@@ -1,70 +1,41 @@
 # Weather Widget
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The widget uses geolocation if enabled to show you your current weather in your location.
+if not enabled it defaults to London weather
+You can type in any city to receive the weather for that city and you can specify a country code after if the city name occurs in other countries (eg "London, CA" or "London, GB")
 
-## Available Scripts
+It has been deployed on Heroku at:
+[https://weather-widget.herokuapp.com/](https://weather-widget.herokuapp.com/)
 
-In the project directory, you can run:
+The widget is currently at full size as I took widget to mean a small app that another website could render in an iframe etc
+But it could easily be made smaller if not embedding it and instead just having it as a component within the app by adjusting the width and height of the app class.
 
-### `yarn start`
+## Installation and Setup Instructions
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Clone down this repository. You will need `node` and `yarn` installed globally on your machine.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+Installation:
 
-### `yarn test`
+`yarn install`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+To Run Test Suite:
 
-### `yarn build`
+`yarn test`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+To Start Server:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`yarn start`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To Visit App:
 
-### `yarn eject`
+`localhost:3000/`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## What I would do given more time:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I would've liked to have implemented a dynamic background that changed based on the time. The assets (royalty free from Adobe Stock) are there for that purpose as is the getTime function but I didn't have enough time to implement it. I would've used the getTime to check if time was before midday, after midday, after evening etc to assign a class name to choose the background.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+The temp and other weather data could easily be added to the 5 day forecast to add more information. The time could be added too by using my getTime function
+I think having the forecast rail with an open close for the current weather data could have been cool if I had more time
+I also would've liked to have added more tests to functionality.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+The geolocation takes a while to either succeed or fail and call the default
